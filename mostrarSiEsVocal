@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+char pedirDato();
+
+void main()
+{
+
+    char vocal=0;
+
+    vocal=pedirDato();
+
+    switch(vocal)
+    {
+    case 'a':
+        printf(" Es %c \n", vocal);
+        break;
+    case 'e':
+        printf(" Es %c \n", vocal);
+        break;
+    case 'i':
+        printf(" Es %c \n", vocal);
+        break;
+    case 'o':
+        printf(" Es %c \n", vocal);
+        break;
+    case 'u':
+        printf(" Es %c \n", vocal);
+        break;
+    default:
+        printf("No es un caracter valido\n");
+        break;
+    }//Termina el switch
+
+    piePrograma();
+
+}
+char pedirDato()
+{
+     char v=0;
+
+     printf("Ingresa una letra: ");
+     scanf("%c",&v);
+
+     return v;
+
+}
