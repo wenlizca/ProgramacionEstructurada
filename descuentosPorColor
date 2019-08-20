@@ -1,0 +1,60 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+#include<ctype.h>
+
+//Variables globales
+float compra=0;
+
+void Leer();
+void color();
+
+void main()
+{
+    color();
+}
+void Leer()
+{
+    printf("Ingresa el costo de la compra total: ");
+    scanf("%f",&compra);
+}
+void color()
+{
+
+    char co;
+    float operacion=0;
+
+    printf("Ingresa B para blanca. \nIngresa V para verde. \nIngresa A para amarilla. \nIngresa Z para azul. \nIngresa R para roja \n");
+
+    printf("Ingresa el color de la bolita: ");
+    scanf("%c",&co);
+
+    switch(co)
+    {
+    case 'B':
+        Leer();
+        printf("Su compra no tiene descuento.\nTotal a pagar: %.2f\n", compra);
+        break;
+    case 'V':
+        Leer();
+        operacion=compra-(compra*0.10);
+        printf("Su compra tiene un descuento del 10% :D.\n \nTotal a pagar: %.2f\n", operacion);
+        break;
+    case 'A':
+        Leer();
+        operacion=compra-(compra*0.25);
+        printf("Su compra tiene un descuento del 25% :D.\n \nTotal a pagar: %.2f\n", operacion);
+        break;
+    case 'Z':
+        Leer();
+        operacion=compra-(compra*0.50);
+        printf("Su compra tiene un descuento del 50% :D.\n \nTotal a pagar: %.2f\n", operacion);
+        break;
+    case 'R':
+        printf("Su compra tiene un descuento del 100% :D.\n \n ¡ Es Gratis :D !\n");
+        break;
+    default:
+        printf("ERROR.");
+    }
+
+}
