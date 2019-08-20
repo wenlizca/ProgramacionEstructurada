@@ -1,0 +1,46 @@
+//Programa que identifica el dato, mostrando cual fue el digito que ingresaste y el tipo
+#include <stdio.h>
+#include <ctype.h>
+#include <stdlib.h>
+
+char pedirDato();
+
+void main()
+{
+
+
+char letra=0;
+letra=pedirDato();
+
+    /*switch(letra)
+    {
+    case letra:
+        printf("Ingresaste: %c , y es de tipo: %c \n", letra, getchar(letra));
+        break;
+    default:
+        break;
+    }*/
+
+    if(letra==letra)
+    {
+        printf("Ingresaste: %c , y es de tipo: \n",getchar(letra));
+    }
+    else
+    {
+        printf("_");
+    }
+
+
+piePrograma();
+
+}
+char pedirDato()
+{
+     char l=0;
+
+     printf("Ingresa una letra: ");
+     scanf("%c",&l);
+
+     return l;
+
+}
