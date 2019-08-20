@@ -1,0 +1,36 @@
+/*Programa que calcule el seno, coseno y tangente de un
+triángulo rectángulo a partir de 2 datos, los catetos.
+*/
+
+#include <stdio.h>
+#include<math.h>
+
+
+void catetos();
+float n1=0, n2=0;
+
+void main()
+{
+
+    catetos();
+
+}
+void catetos ()
+{
+    float hipotenusa=0, seno=0, coseno=0, tangente=0;
+
+    printf("Ingresa el valor del cateto opuesto: ");
+    scanf("%f",&n1);
+    printf("Ingresa el valor del cateto adyacente: ");
+    scanf("%f",&n2);
+
+    hipotenusa=sqrt((pow(n1,2)+(pow(n2,2))));
+
+    seno=n1/hipotenusa;
+    coseno=n2/hipotenusa;
+    tangente=n1/n2;
+
+    printf("El Cateto opuesto es: %.2f y el Cateto Adyacente es: %.2f", n1, n2);
+    printf("\n Por lo tanto, el seno es: %f , el coseno es: %f y la tangente es: %f \n", seno, coseno, tangente);
+
+}
