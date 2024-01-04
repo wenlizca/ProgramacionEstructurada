@@ -1,0 +1,46 @@
+//Librerias
+using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
+
+public class HelloWorld
+{
+    
+    public static void Main(string[] args)
+    {
+        int opcion;
+
+        //Menu de opciones
+        Console.WriteLine ("Presiona el numero correspondiente a la actividad que desea hacer");
+        Console.WriteLine ("1. Agregar una tarea");
+        Console.WriteLine ("2. Marcar una tarea como completada");
+        Console.WriteLine ("3. Mostrar todas las tareas");
+        Console.WriteLine ("4. Salir");
+        string op = Console.ReadLine();
+        
+        opcion = Convert.ToInt32(op);
+
+        //Acciones del menu
+        switch (op)
+        {
+            case "1": 
+                Console.WriteLine ("Elegiste agregar una tarea");
+                break;
+            
+            case "2":
+                Console.WriteLine ("Elegiste completar una tarea");
+                break;
+                
+            case "3":
+                Console.WriteLine ("Elegiste ver todas las tareas");
+                break;
+                
+            case "4":
+                Console.WriteLine ("Gracias. Estas saliendo de la aplicacion");
+                Application.Exit();
+                break;
+            
+        }
+        
+    }
+}
